@@ -4,7 +4,7 @@ import (
 	"net/http"
     "fmt"
 	"github.com/gin-gonic/gin"
-
+    "example.com/hello"
     "example.com/morestring"
 )
 // postAlbums adds an album from JSON received in the request body.
@@ -40,6 +40,7 @@ func getAlbumByID(c *gin.Context) {
 
 func main() {
     fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
+    fmt.Println(hello.Hello())
     router := gin.Default()
     router.GET("/albums", getAlbums)
     router.GET("/albums/:id", getAlbumByID)

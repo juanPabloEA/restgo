@@ -2,8 +2,10 @@ package main
 
 import (
 	"net/http"
-
+    "fmt"
 	"github.com/gin-gonic/gin"
+
+    "example.com/morestring"
 )
 // postAlbums adds an album from JSON received in the request body.
 func postAlbums(c *gin.Context) {
@@ -37,6 +39,7 @@ func getAlbumByID(c *gin.Context) {
 }
 
 func main() {
+    fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
     router := gin.Default()
     router.GET("/albums", getAlbums)
     router.GET("/albums/:id", getAlbumByID)

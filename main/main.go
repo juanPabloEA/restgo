@@ -1,7 +1,9 @@
 package main
 
-import "example.com/forexample"
+import (
+	forexample "example.com/forexample"
+	)
 
 func main() {
-	forexample.rangeKeyExpired()
+	forexample.SecondItemInTheRange()
 }
